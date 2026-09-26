@@ -36,7 +36,14 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
         <h3 className="font-medium text-foreground group-hover:text-muted-foreground transition-colors">
           {product.name}
         </h3>
-        <p className="text-muted-foreground mt-1">${product.price}</p>
+        <div className="flex items-center gap-2 text-muted-foreground mt-1">
+          {product.originalPrice && (
+            <span className="line-through">${product.originalPrice}</span>
+          )}
+          <span className={product.originalPrice ? "text-foreground" : undefined}>
+            ${product.price}
+          </span>
+        </div>
       </Link>
     </motion.div>
   )
