@@ -7,6 +7,7 @@ export interface Product {
   id: string
   name: string
   price: number
+  originalPrice?: number
   image: string
   images?: string[]
   description?: string
@@ -23,10 +24,12 @@ export const products: Product[] = [
     id: "1",
     name: "HODDIE - ORIGINS ZIP",
     price: 40,
-    image: "/images/products/origins-zip-1.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0775-KZOaGItHVKIcTJro16vsp18SrfOCiL.jpg",
     images: [
-      "/images/products/origins-zip-1.jpg",
-      "/images/products/origins-zip-2.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0775-KZOaGItHVKIcTJro16vsp18SrfOCiL.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0778-yZAlvXmLKJ4jgcBVrMIeKcTMDNAiVw.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0773-Tdj1m9OcflkBYLHLFMUjuqdvoTEliP.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0774-2p15OetaIUUzBgw6nKi5dW70XvZYhT.jpg",
     ],
     description: "Una pieza creada para representar la esencia de Rebel Nation. La Origins Zip combina comodidad, minimalismo y detalles gráficos inspirados en la cultura urbana moderna.",
     details: [
@@ -46,12 +49,14 @@ export const products: Product[] = [
   {
     id: "2",
     name: "TSHIRT - MOVEMENT TEE",
-    price: 30,
-    image: "/images/products/movement-tee-1.jpg",
+    price: 20,
+    originalPrice: 30,
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0749-5HxwnSJ57ZzUXYiPZaHcKe7er1Tyd5.jpg",
     images: [
-      "/images/products/movement-tee-1.jpg",
-      "/images/products/movement-tee-2.jpg",
-      "/images/products/movement-tee-3.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0749-5HxwnSJ57ZzUXYiPZaHcKe7er1Tyd5.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0747-81qLAYaldQByYo8TBvVyZ1xjbHdzrx.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0748-9hbGV9uTc1eA7DYVGshY8rYLAThGFV.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0750-Stce3COarbSiWirjRgpTUwZNKerUuU.jpg",
     ],
     description: "La pieza donde comienza todo. La Movement Tee representa el origen de Rebel Nation: minimalismo oscuro, identidad urbana y una visión creada para quienes no siguen tendencias, las crean.",
     details: [

@@ -82,7 +82,12 @@ export function SlideCart() {
                       <div className="flex-1 flex flex-col">
                         <h3 className="font-medium">{item.product.name}</h3>
                         <p className="text-sm text-muted-foreground">Talla: {item.size}</p>
-                        <p className="text-sm font-medium mt-1">${item.product.price}</p>
+                        <p className="text-sm font-medium mt-1">
+            {item.product.originalPrice && (
+              <span className="mr-2 text-muted-foreground line-through">${item.product.originalPrice}</span>
+            )}
+            <span>${item.product.price}</span>
+          </p>
                         
                         <div className="flex items-center justify-between mt-auto">
                           <div className="flex items-center gap-2">

@@ -118,7 +118,12 @@ export default function ProductPage({ params }: ProductPageProps) {
             )}
             
             <h1 className="text-3xl lg:text-4xl font-bold">{product.name}</h1>
-            <p className="mt-2 text-2xl">${product.price}</p>
+            <p className="mt-2 text-2xl">
+              {product.originalPrice && (
+                <span className="mr-3 text-muted-foreground line-through">${product.originalPrice}</span>
+              )}
+              <span>${product.price}</span>
+            </p>
 
             {product.description && (
               <p className="mt-6 text-muted-foreground leading-relaxed">
