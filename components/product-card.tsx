@@ -36,7 +36,12 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
         <h3 className="font-medium text-foreground group-hover:text-muted-foreground transition-colors">
           {product.name}
         </h3>
-        <p className="text-muted-foreground mt-1">${product.price}</p>
+        <p className="text-muted-foreground mt-1">
+          {product.originalPrice && (
+            <span className="mr-2 line-through">${product.originalPrice}</span>
+          )}
+          <span>${product.price}</span>
+        </p>
       </Link>
     </motion.div>
   )
