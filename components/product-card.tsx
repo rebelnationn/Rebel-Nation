@@ -26,8 +26,13 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
+          {product.originalPrice && (
+            <span className="absolute top-3 right-3 z-10 rounded-sm bg-red-600 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+              OFERTA
+            </span>
+          )}
           {product.isNewDrop && (
-            <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-xs px-3 py-1 rounded-full font-medium uppercase tracking-wide">
+            <span className="absolute top-3 left-3 z-10 bg-primary text-primary-foreground text-xs px-3 py-1 rounded-full font-medium uppercase tracking-wide">
               Nuevo
             </span>
           )}
@@ -38,9 +43,9 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
         </h3>
         <p className="text-muted-foreground mt-1">
           {product.originalPrice && (
-            <span className="mr-2 line-through">${product.originalPrice}</span>
+            <span className="mr-2 line-through">${product.originalPrice.toFixed(2)}</span>
           )}
-          <span>${product.price}</span>
+          <span className="font-semibold text-foreground">${product.price.toFixed(2)}</span>
         </p>
       </Link>
     </motion.div>

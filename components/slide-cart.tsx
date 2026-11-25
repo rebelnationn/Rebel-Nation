@@ -84,9 +84,9 @@ export function SlideCart() {
                         <p className="text-sm text-muted-foreground">Talla: {item.size}</p>
                         <p className="text-sm font-medium mt-1">
             {item.product.originalPrice && (
-              <span className="mr-2 text-muted-foreground line-through">${item.product.originalPrice}</span>
+              <span className="mr-2 text-muted-foreground line-through">${item.product.originalPrice.toFixed(2)}</span>
             )}
-            <span>${item.product.price}</span>
+            <span className="font-semibold">${item.product.price.toFixed(2)}</span>
           </p>
                         
                         <div className="flex items-center justify-between mt-auto">
@@ -127,7 +127,7 @@ export function SlideCart() {
               <div className="p-6 border-t border-border">
                 <div className="flex items-center justify-between mb-6">
                   <span className="text-muted-foreground">Subtotal</span>
-                  <span className="text-xl font-semibold">${totalPrice}</span>
+                  <span className="text-xl font-semibold">${totalPrice.toFixed(2)}</span>
                 </div>
                 <a
                   href={generateWhatsAppMessage(items)}

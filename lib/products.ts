@@ -22,8 +22,9 @@ export interface Product {
 export const products: Product[] = [
   {
     id: "1",
-    name: "HODDIE - ORIGINS ZIP",
-    price: 40,
+    name: "HOODIE - ORIGINS ZIP",
+    price: 29.99,
+    originalPrice: 40,
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0775-KZOaGItHVKIcTJro16vsp18SrfOCiL.jpg",
     images: [
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0775-KZOaGItHVKIcTJro16vsp18SrfOCiL.jpg",
@@ -49,7 +50,7 @@ export const products: Product[] = [
   {
     id: "2",
     name: "TSHIRT - MOVEMENT TEE",
-    price: 20,
+    price: 20.99,
     originalPrice: 30,
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0749-5HxwnSJ57ZzUXYiPZaHcKe7er1Tyd5.jpg",
     images: [

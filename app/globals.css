@@ -76,6 +76,49 @@
   }
 }
 
+@keyframes black-friday-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.black-friday-marquee {
+  height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.black-friday-marquee__track {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  align-items: center;
+  animation: black-friday-marquee 28s linear infinite;
+}
+
+.black-friday-marquee__track span {
+  flex: none;
+  padding: 0 2rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.black-friday-marquee:hover .black-friday-marquee__track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .black-friday-marquee__track {
+    animation: none;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .black-friday-marquee__track span:nth-child(2) {
+    display: none;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

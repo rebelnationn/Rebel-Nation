@@ -6,7 +6,7 @@ import { products } from "@/lib/products"
 
 export default function ColeccionPage() {
   return (
-    <div className="pt-20 lg:pt-24 pb-20 min-h-screen">
+    <div className="pt-28 lg:pt-32 pb-20 min-h-screen">
       {/* Hero Header */}
       <section className="py-16 lg:py-24 bg-card">
         <div className="container mx-auto px-4 lg:px-8 text-center">
