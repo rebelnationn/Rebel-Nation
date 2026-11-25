@@ -77,6 +77,16 @@ export function Navbar() {
             </button>
           </div>
         </nav>
+        <div
+          className="black-friday-marquee bg-zinc-600 text-white"
+          role="region"
+          aria-label="🔥 BLACK FRIDAY SALE 🔥 OFERTAS EXCLUSIVAS POR TIEMPO LIMITADO"
+        >
+          <div className="black-friday-marquee__track" aria-hidden="true">
+            <span>🔥 BLACK FRIDAY SALE 🔥 OFERTAS EXCLUSIVAS POR TIEMPO LIMITADO</span>
+            <span>🔥 BLACK FRIDAY SALE 🔥 OFERTAS EXCLUSIVAS POR TIEMPO LIMITADO</span>
+          </div>
+        </div>
       </header>
 
       {/* Mobile Menu */}

@@ -47,7 +47,7 @@ export default function ProductPage({ params }: ProductPageProps) {
     .slice(0, 4)
 
   return (
-    <div className="pt-20 lg:pt-24 pb-20 min-h-screen">
+    <div className="pt-28 lg:pt-32 pb-20 min-h-screen">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Back Link */}
         <motion.div
@@ -73,6 +73,11 @@ export default function ProductPage({ params }: ProductPageProps) {
             className="space-y-4"
           >
             <div className="relative aspect-[3/4] bg-card rounded-lg overflow-hidden">
+              {product.originalPrice && (
+                <span className="absolute right-3 top-3 z-10 rounded-sm bg-red-600 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                  OFERTA
+                </span>
+              )}
               <Image
                 src={product.images?.[activeImage] || product.image}
                 alt={product.name}
@@ -120,9 +125,9 @@ export default function ProductPage({ params }: ProductPageProps) {
             <h1 className="text-3xl lg:text-4xl font-bold">{product.name}</h1>
             <p className="mt-2 text-2xl">
               {product.originalPrice && (
-                <span className="mr-3 text-muted-foreground line-through">${product.originalPrice}</span>
+                <span className="mr-3 text-muted-foreground line-through">${product.originalPrice.toFixed(2)}</span>
               )}
-              <span>${product.price}</span>
+              <span className="font-bold text-foreground">${product.price.toFixed(2)}</span>
             </p>
 
             {product.description && (

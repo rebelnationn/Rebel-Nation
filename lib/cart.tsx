@@ -98,11 +98,11 @@ export function generateWhatsAppMessage(items: CartItem[]): string {
     message += `• ${item.product.name}\n`
     message += `  Talla: ${item.size}\n`
     message += `  Cantidad: ${item.quantity}\n`
-    message += `  Precio: $${item.product.price * item.quantity}\n\n`
+    message += `  Precio: $${(item.product.price * item.quantity).toFixed(2)}\n\n`
   })
   
   const total = items.reduce((sum, item) => sum + item.product.price * item.quantity, 0)
-  message += `Total: $${total}\n\nGracias!`
+  message += `Total: $${total.toFixed(2)}\n\nGracias!`
   
   return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
 }
@@ -116,7 +116,7 @@ export function generateSingleProductWhatsAppMessage(
   let message = `Hola, quiero comprar la ${product.name}.\n`
   message += `Talla: ${size}\n`
   message += `Cantidad: ${quantity}\n`
-  message += `Precio: $${product.price * quantity}`
+  message += `Precio: $${(product.price * quantity).toFixed(2)}`
   
   return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
 }

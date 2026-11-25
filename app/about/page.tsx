@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export default function AboutPage() {
   return (
-    <div className="pt-20 lg:pt-24 pb-20 min-h-screen">
+    <div className="pt-28 lg:pt-32 pb-20 min-h-screen">
       {/* Hero Header */}
       <section className="relative py-24 lg:py-36 overflow-hidden">
         <div className="absolute inset-0">
